@@ -1,6 +1,10 @@
 # grunt-infosphere
 
-> Compile contracts and (optionally) save output to file
+> Create Infosphere and infosphered contracts
+
+## Examples
+
+[https://github.com/SafeMarket/grunt-infosphere/tree/master/contracts]
 
 ## Getting Started
 This plugin requires Grunt `~0.4.5`
