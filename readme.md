@@ -4,7 +4,7 @@
 
 ## Examples
 
-[https://github.com/SafeMarket/grunt-infosphere/tree/master/contracts]
+https://github.com/SafeMarket/grunt-infosphere/tree/master/contracts
 
 ## Getting Started
 This plugin requires Grunt `~0.4.5`
