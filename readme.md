@@ -31,7 +31,7 @@ grunt.initConfig({
 	    simple:{
 		    options:{
 		    	types: ['bool', 'address', 'bytes', 'string', 'int', 'uint']
-		    	,files: {
+		    	,files: { //where to output contracts
 		    		infosphere: 'contracts/simple/Infosphere.sol'
 		    		,infosphered: 'contracts/simple/infosphered.sol'
 		    	},ignoreSolc: false //don't create contracts if solc fails to compile
