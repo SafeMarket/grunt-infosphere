@@ -1,0 +1,32 @@
+{
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "solc": "^0.1.6"
+  },
+  "name": "grunt-infosphere",
+  "description": "Create an Infosphere and infosphered contract",
+  "version": "0.1.0",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "grunt infosphere"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SafeMarket/grunt-infosphere.git"
+  },
+  "keywords": [
+    "grunt",
+    "infosphere",
+    "ethereum",
+    "solidity"
+  ],
+  "author": "Aakil Fernandes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SafeMarket/grunt-infosphere/issues"
+  },
+  "homepage": "https://github.com/SafeMarket/grunt-infosphere#readme"
+}
