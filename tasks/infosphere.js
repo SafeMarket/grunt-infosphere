@@ -22,6 +22,12 @@ module.exports = function(grunt){
 				+'\r\n'
 				+'\r\n    Infosphere infosphere;'
 				+'\r\n'
+				+'\r\n    function setInfosphere(address infosphereAddr){'
+				+'\r\n        if(msg.sender!=owner) throw;'
+				+'\r\n        infosphere = Infosphere(infosphereAddr);'
+				+'\r\n    }'
+				+'\r\n'
+
 			,ownedSol = 'contract owned { address owner; }'
 
 		var subtypesOptions = options.subtypes

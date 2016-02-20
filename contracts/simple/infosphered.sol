@@ -2,6 +2,11 @@ contract infosphered is owned{
 
     Infosphere infosphere;
 
+    function setInfosphere(address infosphereAddr){
+        if(msg.sender!=owner) throw;
+        infosphere = Infosphere(infosphereAddr);
+    }
+
     // ================ bool ================
 
     function setBool(bytes key, bool value) external{
