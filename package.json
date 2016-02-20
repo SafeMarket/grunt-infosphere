@@ -8,7 +8,7 @@
   },
   "name": "grunt-infosphere",
   "description": "Create an Infosphere and infosphered contract",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "main": "Gruntfile.js",
   "scripts": {
     "test": "grunt infosphere"
