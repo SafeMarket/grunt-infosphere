@@ -7,6 +7,10 @@ contract infosphered is owned{
         infosphere = Infosphere(infosphereAddr);
     }
 
+    function getInfosphereAddr() constant returns(address){
+        return address(infosphere);
+    }
+
     // ================ bool ================
 
     function setBool(bytes key, bool value) external{

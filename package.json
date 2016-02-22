@@ -4,7 +4,7 @@
   },
   "devDependencies": {
     "grunt": "~0.4.5",
-    "solc": "^0.1.6"
+    "solc": "^0.2.2-2"
   },
   "name": "grunt-infosphere",
   "description": "Create an Infosphere and infosphered contract",
