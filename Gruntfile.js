@@ -11,7 +11,7 @@ module.exports = function(grunt) {
           ,files: {
             infosphere: 'contracts/simple/Infosphere.sol'
             ,infosphered: 'contracts/simple/infosphered.sol'
-          },ignoreSolc: false
+          },ignoreSolc: true
         }
       },
       complete:{

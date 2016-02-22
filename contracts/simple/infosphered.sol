@@ -22,6 +22,10 @@ contract infosphered is owned{
         infosphere.setBool(key,value);
     }
 
+    function getBool(bytes key) constant returns(bool){
+        return infosphere.getMyBool(key);
+    }
+
     // ================ address ================
 
     function setAddress(bytes key, address value) external{
@@ -31,6 +35,10 @@ contract infosphered is owned{
 
     function setAddress(bytes key, address value) internal{
         infosphere.setAddress(key,value);
+    }
+
+    function getAddress(bytes key) constant returns(address){
+        return infosphere.getMyAddress(key);
     }
 
     // ================ bytes ================
@@ -44,6 +52,10 @@ contract infosphered is owned{
         infosphere.setBytes(key,value);
     }
 
+    function getBytes(bytes key) constant returns(bytes){
+        return infosphere.getMyBytes(key);
+    }
+
     // ================ string ================
 
     function setString(bytes key, string value) external{
@@ -53,6 +65,10 @@ contract infosphered is owned{
 
     function setString(bytes key, string value) internal{
         infosphere.setString(key,value);
+    }
+
+    function getString(bytes key) constant returns(string){
+        return infosphere.getMyString(key);
     }
 
     // ================ int ================
@@ -66,6 +82,10 @@ contract infosphered is owned{
         infosphere.setInt(key,value);
     }
 
+    function getInt(bytes key) constant returns(int){
+        return infosphere.getMyInt(key);
+    }
+
     // ================ uint ================
 
     function setUint(bytes key, uint value) external{
@@ -75,5 +95,9 @@ contract infosphered is owned{
 
     function setUint(bytes key, uint value) internal{
         infosphere.setUint(key,value);
+    }
+
+    function getUint(bytes key) constant returns(uint){
+        return infosphere.getMyUint(key);
     }
 }

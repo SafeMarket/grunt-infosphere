@@ -83,6 +83,10 @@ module.exports = function(grunt){
 			infospheredSol+='\r\n        infosphere.set'+typeUpperCaseFirstLetter+'(key,value);'
 			infospheredSol+='\r\n    }'
 			infospheredSol+='\r\n'
+			infospheredSol+='\r\n    function get'+typeUpperCaseFirstLetter+'(bytes key) constant returns('+type+'){'
+			infospheredSol+='\r\n        return infosphere.getMy'+typeUpperCaseFirstLetter+'(key);'
+			infospheredSol+='\r\n    }'
+			infospheredSol+='\r\n'
 		})
 
 		infosphereSol+='}'
