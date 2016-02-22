@@ -27,6 +27,10 @@ module.exports = function(grunt){
 				+'\r\n        infosphere = Infosphere(infosphereAddr);'
 				+'\r\n    }'
 				+'\r\n'
+				+'\r\n    function getInfosphereAddr() constant returns(address){'
+				+'\r\n        return address(infosphere);'
+				+'\r\n    }'
+				+'\r\n'
 
 			,ownedSol = 'contract owned { address owner; }'
 

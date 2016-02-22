@@ -28,5 +28,6 @@
   "bugs": {
     "url": "https://github.com/SafeMarket/grunt-infosphere/issues"
   },
-  "homepage": "https://github.com/SafeMarket/grunt-infosphere#readme"
+  "homepage": "https://github.com/SafeMarket/grunt-infosphere#readme",
+  "dependencies": {}
 }
