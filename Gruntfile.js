@@ -7,34 +7,34 @@ module.exports = function(grunt) {
     infosphere:{
       simple:{
         options:{
-          types: ['bool', 'address', 'bytes', 'string', 'int', 'uint']
+          types: ['bool', 'address', 'bytes32', 'int', 'uint']
           ,files: {
             infosphere: 'contracts/simple/Infosphere.sol'
             ,infosphered: 'contracts/simple/infosphered.sol'
-          },ignoreSolc: true
+          }
         }
       },
-      complete:{
+      complicated:{
         options:{
-          types: ['bool', 'address', 'bytes', 'string', 'int', 'uint']
+          types: ['bool', 'address', 'int', 'uint']
           ,files: {
-            infosphere: 'contracts/complete/Infosphere.sol'
-            ,infosphered: 'contracts/complete/infosphered.sol'
+            infosphere: 'contracts/complicated/Infosphere.sol'
+            ,infosphered: 'contracts/complicated/infosphered.sol'
           },subtypes:{
             bytes:{
               min:1
               ,max:32
-              ,delta:1
+              ,delta:4
             },uint:{
               min:8
               ,max:256
-              ,delta:8
+              ,delta:24
             },int:{
               min:8
               ,max:256
-              ,delta:8
+              ,delta:64
             }
-          },ignoreSolc:true
+          }
         }
       }
     }
