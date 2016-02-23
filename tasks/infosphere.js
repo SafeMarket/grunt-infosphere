@@ -5,7 +5,7 @@ module.exports = function(grunt){
 	grunt.registerMultiTask("infosphere", "Create Infosphere and infosphered contracts", function(){
 		
 		var options = this.options({
-				types: ['bool', 'address', 'bytes', 'string', 'int', 'uint']
+				types: ['bool', 'address', 'bytes32', 'int', 'uint']
 				,files: {
 					infosphere: "Infosphere.sol"
 					,infosphered: "infosphered.sol"
