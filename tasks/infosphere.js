@@ -1,6 +1,5 @@
 module.exports = function(grunt){
-	var fs = require('fs')
-		,solc = require('solc')
+	var solc = require('solc')
 
 	grunt.registerMultiTask("infosphere", "Create Infosphere and infosphered contracts", function(){
 		
@@ -102,8 +101,8 @@ module.exports = function(grunt){
 			if(!ignoreSolc) return false
 		}
 		
-		fs.writeFileSync(files.infosphere,infosphereSol)
-		fs.writeFileSync(files.infosphered,infospheredSol)
+		grunt.file.write(files.infosphere,infosphereSol)
+		grunt.file.write(files.infosphered,infospheredSol)
 		grunt.log.success('Created '+files.infosphere+' and '+files.infosphered)
 		return true
 
