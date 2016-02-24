@@ -5,7 +5,7 @@ module.exports = function(grunt){
 		
 		var options = this.options({
 				keyType: 'bytes8'
-				,types: ['bool', 'address', ''+keyType+'', 'int', 'uint']
+				,types: ['bool', 'address', 'bytes32', 'int', 'uint']
 				,files: {
 					infosphere: "Infosphere.sol"
 					,infosphered: "infosphered.sol"
