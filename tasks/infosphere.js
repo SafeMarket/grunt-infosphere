@@ -4,13 +4,15 @@ module.exports = function(grunt){
 	grunt.registerMultiTask("infosphere", "Create Infosphere and infosphered contracts", function(){
 		
 		var options = this.options({
-				types: ['bool', 'address', 'bytes32', 'int', 'uint']
+				keyType: 'bytes8'
+				,types: ['bool', 'address', ''+keyType+'', 'int', 'uint']
 				,files: {
 					infosphere: "Infosphere.sol"
 					,infosphered: "infosphered.sol"
 				},ignoreSolc: false
 				,subtypes:null
 			})
+			,keyType = options.keyType
 			,types = options.types
 			,files = options.files
 			,ignoreSolc = options.ignoreSolc
@@ -56,33 +58,33 @@ module.exports = function(grunt){
 
 			infosphereSol+='\r\n    // ================ '+type+' ================'
 			infosphereSol+='\r\n'
-			infosphereSol+='\r\n    mapping(address=>mapping(bytes32=>'+type+')) '+typeStore+';'
+			infosphereSol+='\r\n    mapping(address=>mapping('+keyType+'=>'+type+')) '+typeStore+';'
 			infosphereSol+='\r\n'
-			infosphereSol+='\r\n    function get'+typeUpperCaseFirstLetter+'(address addr, bytes32 key) constant returns('+type+'){'
+			infosphereSol+='\r\n    function get'+typeUpperCaseFirstLetter+'(address addr, '+keyType+' key) constant returns('+type+'){'
 			infosphereSol+='\r\n        return '+typeStore+'[addr][key];'
 			infosphereSol+='\r\n    }'
 			infosphereSol+='\r\n'
-			infosphereSol+='\r\n    function getMy'+typeUpperCaseFirstLetter+'(bytes32 key) constant returns('+type+'){'
+			infosphereSol+='\r\n    function getMy'+typeUpperCaseFirstLetter+'('+keyType+' key) constant returns('+type+'){'
 			infosphereSol+='\r\n        return '+typeStore+'[msg.sender][key];'
 			infosphereSol+='\r\n    }'
 			infosphereSol+='\r\n'
-			infosphereSol+='\r\n    function set'+typeUpperCaseFirstLetter+'(bytes32 key, '+type+' value){'
+			infosphereSol+='\r\n    function set'+typeUpperCaseFirstLetter+'('+keyType+' key, '+type+' value){'
 			infosphereSol+='\r\n        '+typeStore+'[msg.sender][key] = value;'
 			infosphereSol+='\r\n    }'
 			infosphereSol+='\r\n'
 
 			infospheredSol+='\r\n    // ================ '+type+' ================'
 			infospheredSol+='\r\n'
-			infospheredSol+='\r\n    function set'+typeUpperCaseFirstLetter+'(bytes32 key, '+type+' value){'
+			infospheredSol+='\r\n    function set'+typeUpperCaseFirstLetter+'('+keyType+' key, '+type+' value){'
 			infospheredSol+='\r\n        if(msg.sender!=owner) throw;'
 			infospheredSol+='\r\n        infosphere.set'+typeUpperCaseFirstLetter+'(key,value);'
 			infospheredSol+='\r\n    }'
 			infospheredSol+='\r\n'
-			infospheredSol+='\r\n    function set'+typeUpperCaseFirstLetter+'ByForce(bytes32 key, '+type+' value) internal{'
+			infospheredSol+='\r\n    function set'+typeUpperCaseFirstLetter+'ByForce('+keyType+' key, '+type+' value) internal{'
 			infospheredSol+='\r\n        infosphere.set'+typeUpperCaseFirstLetter+'(key,value);'
 			infospheredSol+='\r\n    }'
 			infospheredSol+='\r\n'
-			infospheredSol+='\r\n    function get'+typeUpperCaseFirstLetter+'(bytes32 key) constant returns('+type+'){'
+			infospheredSol+='\r\n    function get'+typeUpperCaseFirstLetter+'('+keyType+' key) constant returns('+type+'){'
 			infospheredSol+='\r\n        return infosphere.getMy'+typeUpperCaseFirstLetter+'(key);'
 			infospheredSol+='\r\n    }'
 			infospheredSol+='\r\n'

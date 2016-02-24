@@ -16,7 +16,8 @@ module.exports = function(grunt) {
       },
       complicated:{
         options:{
-          types: ['bool', 'address', 'int', 'uint']
+          keyType: 'bytes8'
+          ,types: ['bool', 'address', 'int', 'uint']
           ,files: {
             infosphere: 'contracts/complicated/Infosphere.sol'
             ,infosphered: 'contracts/complicated/infosphered.sol'

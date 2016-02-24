@@ -2,433 +2,433 @@ contract Infosphere{
 
     // ================ bool ================
 
-    mapping(address=>mapping(bytes32=>bool)) boolStore;
+    mapping(address=>mapping(bytes8=>bool)) boolStore;
 
-    function getBool(address addr, bytes32 key) constant returns(bool){
+    function getBool(address addr, bytes8 key) constant returns(bool){
         return boolStore[addr][key];
     }
 
-    function getMyBool(bytes32 key) constant returns(bool){
+    function getMyBool(bytes8 key) constant returns(bool){
         return boolStore[msg.sender][key];
     }
 
-    function setBool(bytes32 key, bool value){
+    function setBool(bytes8 key, bool value){
         boolStore[msg.sender][key] = value;
     }
 
     // ================ address ================
 
-    mapping(address=>mapping(bytes32=>address)) addressStore;
+    mapping(address=>mapping(bytes8=>address)) addressStore;
 
-    function getAddress(address addr, bytes32 key) constant returns(address){
+    function getAddress(address addr, bytes8 key) constant returns(address){
         return addressStore[addr][key];
     }
 
-    function getMyAddress(bytes32 key) constant returns(address){
+    function getMyAddress(bytes8 key) constant returns(address){
         return addressStore[msg.sender][key];
     }
 
-    function setAddress(bytes32 key, address value){
+    function setAddress(bytes8 key, address value){
         addressStore[msg.sender][key] = value;
     }
 
     // ================ int ================
 
-    mapping(address=>mapping(bytes32=>int)) intStore;
+    mapping(address=>mapping(bytes8=>int)) intStore;
 
-    function getInt(address addr, bytes32 key) constant returns(int){
+    function getInt(address addr, bytes8 key) constant returns(int){
         return intStore[addr][key];
     }
 
-    function getMyInt(bytes32 key) constant returns(int){
+    function getMyInt(bytes8 key) constant returns(int){
         return intStore[msg.sender][key];
     }
 
-    function setInt(bytes32 key, int value){
+    function setInt(bytes8 key, int value){
         intStore[msg.sender][key] = value;
     }
 
     // ================ uint ================
 
-    mapping(address=>mapping(bytes32=>uint)) uintStore;
+    mapping(address=>mapping(bytes8=>uint)) uintStore;
 
-    function getUint(address addr, bytes32 key) constant returns(uint){
+    function getUint(address addr, bytes8 key) constant returns(uint){
         return uintStore[addr][key];
     }
 
-    function getMyUint(bytes32 key) constant returns(uint){
+    function getMyUint(bytes8 key) constant returns(uint){
         return uintStore[msg.sender][key];
     }
 
-    function setUint(bytes32 key, uint value){
+    function setUint(bytes8 key, uint value){
         uintStore[msg.sender][key] = value;
     }
 
     // ================ bytes1 ================
 
-    mapping(address=>mapping(bytes32=>bytes1)) bytes1Store;
+    mapping(address=>mapping(bytes8=>bytes1)) bytes1Store;
 
-    function getBytes1(address addr, bytes32 key) constant returns(bytes1){
+    function getBytes1(address addr, bytes8 key) constant returns(bytes1){
         return bytes1Store[addr][key];
     }
 
-    function getMyBytes1(bytes32 key) constant returns(bytes1){
+    function getMyBytes1(bytes8 key) constant returns(bytes1){
         return bytes1Store[msg.sender][key];
     }
 
-    function setBytes1(bytes32 key, bytes1 value){
+    function setBytes1(bytes8 key, bytes1 value){
         bytes1Store[msg.sender][key] = value;
     }
 
     // ================ bytes5 ================
 
-    mapping(address=>mapping(bytes32=>bytes5)) bytes5Store;
+    mapping(address=>mapping(bytes8=>bytes5)) bytes5Store;
 
-    function getBytes5(address addr, bytes32 key) constant returns(bytes5){
+    function getBytes5(address addr, bytes8 key) constant returns(bytes5){
         return bytes5Store[addr][key];
     }
 
-    function getMyBytes5(bytes32 key) constant returns(bytes5){
+    function getMyBytes5(bytes8 key) constant returns(bytes5){
         return bytes5Store[msg.sender][key];
     }
 
-    function setBytes5(bytes32 key, bytes5 value){
+    function setBytes5(bytes8 key, bytes5 value){
         bytes5Store[msg.sender][key] = value;
     }
 
     // ================ bytes9 ================
 
-    mapping(address=>mapping(bytes32=>bytes9)) bytes9Store;
+    mapping(address=>mapping(bytes8=>bytes9)) bytes9Store;
 
-    function getBytes9(address addr, bytes32 key) constant returns(bytes9){
+    function getBytes9(address addr, bytes8 key) constant returns(bytes9){
         return bytes9Store[addr][key];
     }
 
-    function getMyBytes9(bytes32 key) constant returns(bytes9){
+    function getMyBytes9(bytes8 key) constant returns(bytes9){
         return bytes9Store[msg.sender][key];
     }
 
-    function setBytes9(bytes32 key, bytes9 value){
+    function setBytes9(bytes8 key, bytes9 value){
         bytes9Store[msg.sender][key] = value;
     }
 
     // ================ bytes13 ================
 
-    mapping(address=>mapping(bytes32=>bytes13)) bytes13Store;
+    mapping(address=>mapping(bytes8=>bytes13)) bytes13Store;
 
-    function getBytes13(address addr, bytes32 key) constant returns(bytes13){
+    function getBytes13(address addr, bytes8 key) constant returns(bytes13){
         return bytes13Store[addr][key];
     }
 
-    function getMyBytes13(bytes32 key) constant returns(bytes13){
+    function getMyBytes13(bytes8 key) constant returns(bytes13){
         return bytes13Store[msg.sender][key];
     }
 
-    function setBytes13(bytes32 key, bytes13 value){
+    function setBytes13(bytes8 key, bytes13 value){
         bytes13Store[msg.sender][key] = value;
     }
 
     // ================ bytes17 ================
 
-    mapping(address=>mapping(bytes32=>bytes17)) bytes17Store;
+    mapping(address=>mapping(bytes8=>bytes17)) bytes17Store;
 
-    function getBytes17(address addr, bytes32 key) constant returns(bytes17){
+    function getBytes17(address addr, bytes8 key) constant returns(bytes17){
         return bytes17Store[addr][key];
     }
 
-    function getMyBytes17(bytes32 key) constant returns(bytes17){
+    function getMyBytes17(bytes8 key) constant returns(bytes17){
         return bytes17Store[msg.sender][key];
     }
 
-    function setBytes17(bytes32 key, bytes17 value){
+    function setBytes17(bytes8 key, bytes17 value){
         bytes17Store[msg.sender][key] = value;
     }
 
     // ================ bytes21 ================
 
-    mapping(address=>mapping(bytes32=>bytes21)) bytes21Store;
+    mapping(address=>mapping(bytes8=>bytes21)) bytes21Store;
 
-    function getBytes21(address addr, bytes32 key) constant returns(bytes21){
+    function getBytes21(address addr, bytes8 key) constant returns(bytes21){
         return bytes21Store[addr][key];
     }
 
-    function getMyBytes21(bytes32 key) constant returns(bytes21){
+    function getMyBytes21(bytes8 key) constant returns(bytes21){
         return bytes21Store[msg.sender][key];
     }
 
-    function setBytes21(bytes32 key, bytes21 value){
+    function setBytes21(bytes8 key, bytes21 value){
         bytes21Store[msg.sender][key] = value;
     }
 
     // ================ bytes25 ================
 
-    mapping(address=>mapping(bytes32=>bytes25)) bytes25Store;
+    mapping(address=>mapping(bytes8=>bytes25)) bytes25Store;
 
-    function getBytes25(address addr, bytes32 key) constant returns(bytes25){
+    function getBytes25(address addr, bytes8 key) constant returns(bytes25){
         return bytes25Store[addr][key];
     }
 
-    function getMyBytes25(bytes32 key) constant returns(bytes25){
+    function getMyBytes25(bytes8 key) constant returns(bytes25){
         return bytes25Store[msg.sender][key];
     }
 
-    function setBytes25(bytes32 key, bytes25 value){
+    function setBytes25(bytes8 key, bytes25 value){
         bytes25Store[msg.sender][key] = value;
     }
 
     // ================ bytes29 ================
 
-    mapping(address=>mapping(bytes32=>bytes29)) bytes29Store;
+    mapping(address=>mapping(bytes8=>bytes29)) bytes29Store;
 
-    function getBytes29(address addr, bytes32 key) constant returns(bytes29){
+    function getBytes29(address addr, bytes8 key) constant returns(bytes29){
         return bytes29Store[addr][key];
     }
 
-    function getMyBytes29(bytes32 key) constant returns(bytes29){
+    function getMyBytes29(bytes8 key) constant returns(bytes29){
         return bytes29Store[msg.sender][key];
     }
 
-    function setBytes29(bytes32 key, bytes29 value){
+    function setBytes29(bytes8 key, bytes29 value){
         bytes29Store[msg.sender][key] = value;
     }
 
     // ================ uint8 ================
 
-    mapping(address=>mapping(bytes32=>uint8)) uint8Store;
+    mapping(address=>mapping(bytes8=>uint8)) uint8Store;
 
-    function getUint8(address addr, bytes32 key) constant returns(uint8){
+    function getUint8(address addr, bytes8 key) constant returns(uint8){
         return uint8Store[addr][key];
     }
 
-    function getMyUint8(bytes32 key) constant returns(uint8){
+    function getMyUint8(bytes8 key) constant returns(uint8){
         return uint8Store[msg.sender][key];
     }
 
-    function setUint8(bytes32 key, uint8 value){
+    function setUint8(bytes8 key, uint8 value){
         uint8Store[msg.sender][key] = value;
     }
 
     // ================ uint32 ================
 
-    mapping(address=>mapping(bytes32=>uint32)) uint32Store;
+    mapping(address=>mapping(bytes8=>uint32)) uint32Store;
 
-    function getUint32(address addr, bytes32 key) constant returns(uint32){
+    function getUint32(address addr, bytes8 key) constant returns(uint32){
         return uint32Store[addr][key];
     }
 
-    function getMyUint32(bytes32 key) constant returns(uint32){
+    function getMyUint32(bytes8 key) constant returns(uint32){
         return uint32Store[msg.sender][key];
     }
 
-    function setUint32(bytes32 key, uint32 value){
+    function setUint32(bytes8 key, uint32 value){
         uint32Store[msg.sender][key] = value;
     }
 
     // ================ uint56 ================
 
-    mapping(address=>mapping(bytes32=>uint56)) uint56Store;
+    mapping(address=>mapping(bytes8=>uint56)) uint56Store;
 
-    function getUint56(address addr, bytes32 key) constant returns(uint56){
+    function getUint56(address addr, bytes8 key) constant returns(uint56){
         return uint56Store[addr][key];
     }
 
-    function getMyUint56(bytes32 key) constant returns(uint56){
+    function getMyUint56(bytes8 key) constant returns(uint56){
         return uint56Store[msg.sender][key];
     }
 
-    function setUint56(bytes32 key, uint56 value){
+    function setUint56(bytes8 key, uint56 value){
         uint56Store[msg.sender][key] = value;
     }
 
     // ================ uint80 ================
 
-    mapping(address=>mapping(bytes32=>uint80)) uint80Store;
+    mapping(address=>mapping(bytes8=>uint80)) uint80Store;
 
-    function getUint80(address addr, bytes32 key) constant returns(uint80){
+    function getUint80(address addr, bytes8 key) constant returns(uint80){
         return uint80Store[addr][key];
     }
 
-    function getMyUint80(bytes32 key) constant returns(uint80){
+    function getMyUint80(bytes8 key) constant returns(uint80){
         return uint80Store[msg.sender][key];
     }
 
-    function setUint80(bytes32 key, uint80 value){
+    function setUint80(bytes8 key, uint80 value){
         uint80Store[msg.sender][key] = value;
     }
 
     // ================ uint104 ================
 
-    mapping(address=>mapping(bytes32=>uint104)) uint104Store;
+    mapping(address=>mapping(bytes8=>uint104)) uint104Store;
 
-    function getUint104(address addr, bytes32 key) constant returns(uint104){
+    function getUint104(address addr, bytes8 key) constant returns(uint104){
         return uint104Store[addr][key];
     }
 
-    function getMyUint104(bytes32 key) constant returns(uint104){
+    function getMyUint104(bytes8 key) constant returns(uint104){
         return uint104Store[msg.sender][key];
     }
 
-    function setUint104(bytes32 key, uint104 value){
+    function setUint104(bytes8 key, uint104 value){
         uint104Store[msg.sender][key] = value;
     }
 
     // ================ uint128 ================
 
-    mapping(address=>mapping(bytes32=>uint128)) uint128Store;
+    mapping(address=>mapping(bytes8=>uint128)) uint128Store;
 
-    function getUint128(address addr, bytes32 key) constant returns(uint128){
+    function getUint128(address addr, bytes8 key) constant returns(uint128){
         return uint128Store[addr][key];
     }
 
-    function getMyUint128(bytes32 key) constant returns(uint128){
+    function getMyUint128(bytes8 key) constant returns(uint128){
         return uint128Store[msg.sender][key];
     }
 
-    function setUint128(bytes32 key, uint128 value){
+    function setUint128(bytes8 key, uint128 value){
         uint128Store[msg.sender][key] = value;
     }
 
     // ================ uint152 ================
 
-    mapping(address=>mapping(bytes32=>uint152)) uint152Store;
+    mapping(address=>mapping(bytes8=>uint152)) uint152Store;
 
-    function getUint152(address addr, bytes32 key) constant returns(uint152){
+    function getUint152(address addr, bytes8 key) constant returns(uint152){
         return uint152Store[addr][key];
     }
 
-    function getMyUint152(bytes32 key) constant returns(uint152){
+    function getMyUint152(bytes8 key) constant returns(uint152){
         return uint152Store[msg.sender][key];
     }
 
-    function setUint152(bytes32 key, uint152 value){
+    function setUint152(bytes8 key, uint152 value){
         uint152Store[msg.sender][key] = value;
     }
 
     // ================ uint176 ================
 
-    mapping(address=>mapping(bytes32=>uint176)) uint176Store;
+    mapping(address=>mapping(bytes8=>uint176)) uint176Store;
 
-    function getUint176(address addr, bytes32 key) constant returns(uint176){
+    function getUint176(address addr, bytes8 key) constant returns(uint176){
         return uint176Store[addr][key];
     }
 
-    function getMyUint176(bytes32 key) constant returns(uint176){
+    function getMyUint176(bytes8 key) constant returns(uint176){
         return uint176Store[msg.sender][key];
     }
 
-    function setUint176(bytes32 key, uint176 value){
+    function setUint176(bytes8 key, uint176 value){
         uint176Store[msg.sender][key] = value;
     }
 
     // ================ uint200 ================
 
-    mapping(address=>mapping(bytes32=>uint200)) uint200Store;
+    mapping(address=>mapping(bytes8=>uint200)) uint200Store;
 
-    function getUint200(address addr, bytes32 key) constant returns(uint200){
+    function getUint200(address addr, bytes8 key) constant returns(uint200){
         return uint200Store[addr][key];
     }
 
-    function getMyUint200(bytes32 key) constant returns(uint200){
+    function getMyUint200(bytes8 key) constant returns(uint200){
         return uint200Store[msg.sender][key];
     }
 
-    function setUint200(bytes32 key, uint200 value){
+    function setUint200(bytes8 key, uint200 value){
         uint200Store[msg.sender][key] = value;
     }
 
     // ================ uint224 ================
 
-    mapping(address=>mapping(bytes32=>uint224)) uint224Store;
+    mapping(address=>mapping(bytes8=>uint224)) uint224Store;
 
-    function getUint224(address addr, bytes32 key) constant returns(uint224){
+    function getUint224(address addr, bytes8 key) constant returns(uint224){
         return uint224Store[addr][key];
     }
 
-    function getMyUint224(bytes32 key) constant returns(uint224){
+    function getMyUint224(bytes8 key) constant returns(uint224){
         return uint224Store[msg.sender][key];
     }
 
-    function setUint224(bytes32 key, uint224 value){
+    function setUint224(bytes8 key, uint224 value){
         uint224Store[msg.sender][key] = value;
     }
 
     // ================ uint248 ================
 
-    mapping(address=>mapping(bytes32=>uint248)) uint248Store;
+    mapping(address=>mapping(bytes8=>uint248)) uint248Store;
 
-    function getUint248(address addr, bytes32 key) constant returns(uint248){
+    function getUint248(address addr, bytes8 key) constant returns(uint248){
         return uint248Store[addr][key];
     }
 
-    function getMyUint248(bytes32 key) constant returns(uint248){
+    function getMyUint248(bytes8 key) constant returns(uint248){
         return uint248Store[msg.sender][key];
     }
 
-    function setUint248(bytes32 key, uint248 value){
+    function setUint248(bytes8 key, uint248 value){
         uint248Store[msg.sender][key] = value;
     }
 
     // ================ int8 ================
 
-    mapping(address=>mapping(bytes32=>int8)) int8Store;
+    mapping(address=>mapping(bytes8=>int8)) int8Store;
 
-    function getInt8(address addr, bytes32 key) constant returns(int8){
+    function getInt8(address addr, bytes8 key) constant returns(int8){
         return int8Store[addr][key];
     }
 
-    function getMyInt8(bytes32 key) constant returns(int8){
+    function getMyInt8(bytes8 key) constant returns(int8){
         return int8Store[msg.sender][key];
     }
 
-    function setInt8(bytes32 key, int8 value){
+    function setInt8(bytes8 key, int8 value){
         int8Store[msg.sender][key] = value;
     }
 
     // ================ int72 ================
 
-    mapping(address=>mapping(bytes32=>int72)) int72Store;
+    mapping(address=>mapping(bytes8=>int72)) int72Store;
 
-    function getInt72(address addr, bytes32 key) constant returns(int72){
+    function getInt72(address addr, bytes8 key) constant returns(int72){
         return int72Store[addr][key];
     }
 
-    function getMyInt72(bytes32 key) constant returns(int72){
+    function getMyInt72(bytes8 key) constant returns(int72){
         return int72Store[msg.sender][key];
     }
 
-    function setInt72(bytes32 key, int72 value){
+    function setInt72(bytes8 key, int72 value){
         int72Store[msg.sender][key] = value;
     }
 
     // ================ int136 ================
 
-    mapping(address=>mapping(bytes32=>int136)) int136Store;
+    mapping(address=>mapping(bytes8=>int136)) int136Store;
 
-    function getInt136(address addr, bytes32 key) constant returns(int136){
+    function getInt136(address addr, bytes8 key) constant returns(int136){
         return int136Store[addr][key];
     }
 
-    function getMyInt136(bytes32 key) constant returns(int136){
+    function getMyInt136(bytes8 key) constant returns(int136){
         return int136Store[msg.sender][key];
     }
 
-    function setInt136(bytes32 key, int136 value){
+    function setInt136(bytes8 key, int136 value){
         int136Store[msg.sender][key] = value;
     }
 
     // ================ int200 ================
 
-    mapping(address=>mapping(bytes32=>int200)) int200Store;
+    mapping(address=>mapping(bytes8=>int200)) int200Store;
 
-    function getInt200(address addr, bytes32 key) constant returns(int200){
+    function getInt200(address addr, bytes8 key) constant returns(int200){
         return int200Store[addr][key];
     }
 
-    function getMyInt200(bytes32 key) constant returns(int200){
+    function getMyInt200(bytes8 key) constant returns(int200){
         return int200Store[msg.sender][key];
     }
 
-    function setInt200(bytes32 key, int200 value){
+    function setInt200(bytes8 key, int200 value){
         int200Store[msg.sender][key] = value;
     }
 }
