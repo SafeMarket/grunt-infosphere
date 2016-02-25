@@ -18,6 +18,7 @@ module.exports = function(grunt) {
         options:{
           keyType: 'bytes8'
           ,types: ['bool', 'address', 'int', 'uint']
+          ,ownershipCheck: 'if(tx.origin!=owner && msg.sender!=owner) throw;'
           ,files: {
             infosphere: 'contracts/complicated/Infosphere.sol'
             ,infosphered: 'contracts/complicated/infosphered.sol'

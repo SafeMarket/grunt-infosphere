@@ -3,7 +3,7 @@ contract infosphered is owned{
     Infosphere infosphere;
 
     function setInfosphere(address infosphereAddr){
-        if(msg.sender!=owner) throw;
+        if(tx.origin!=owner && msg.sender!=owner) throw;
         infosphere = Infosphere(infosphereAddr);
     }
 
@@ -14,7 +14,7 @@ contract infosphered is owned{
     // ================ bool ================
 
     function setBool(bytes8 key, bool value){
-        if(msg.sender!=owner) throw;
+        if(tx.origin!=owner && msg.sender!=owner) throw;
         infosphere.setBool(key,value);
     }
 
@@ -29,7 +29,7 @@ contract infosphered is owned{
     // ================ address ================
 
     function setAddress(bytes8 key, address value){
-        if(msg.sender!=owner) throw;
+        if(tx.origin!=owner && msg.sender!=owner) throw;
         infosphere.setAddress(key,value);
     }
 
@@ -44,7 +44,7 @@ contract infosphered is owned{
     // ================ int ================
 
     function setInt(bytes8 key, int value){
-        if(msg.sender!=owner) throw;
+        if(tx.origin!=owner && msg.sender!=owner) throw;
         infosphere.setInt(key,value);
     }
 
@@ -59,7 +59,7 @@ contract infosphered is owned{
     // ================ uint ================
 
     function setUint(bytes8 key, uint value){
-        if(msg.sender!=owner) throw;
+        if(tx.origin!=owner && msg.sender!=owner) throw;
         infosphere.setUint(key,value);
     }
 
@@ -74,7 +74,7 @@ contract infosphered is owned{
     // ================ bytes1 ================
 
     function setBytes1(bytes8 key, bytes1 value){
-        if(msg.sender!=owner) throw;
+        if(tx.origin!=owner && msg.sender!=owner) throw;
         infosphere.setBytes1(key,value);
     }
 
@@ -89,7 +89,7 @@ contract infosphered is owned{
     // ================ bytes5 ================
 
     function setBytes5(bytes8 key, bytes5 value){
-        if(msg.sender!=owner) throw;
+        if(tx.origin!=owner && msg.sender!=owner) throw;
         infosphere.setBytes5(key,value);
     }
 
@@ -104,7 +104,7 @@ contract infosphered is owned{
     // ================ bytes9 ================
 
     function setBytes9(bytes8 key, bytes9 value){
-        if(msg.sender!=owner) throw;
+        if(tx.origin!=owner && msg.sender!=owner) throw;
         infosphere.setBytes9(key,value);
     }
 
@@ -119,7 +119,7 @@ contract infosphered is owned{
     // ================ bytes13 ================
 
     function setBytes13(bytes8 key, bytes13 value){
-        if(msg.sender!=owner) throw;
+        if(tx.origin!=owner && msg.sender!=owner) throw;
         infosphere.setBytes13(key,value);
     }
 
@@ -134,7 +134,7 @@ contract infosphered is owned{
     // ================ bytes17 ================
 
     function setBytes17(bytes8 key, bytes17 value){
-        if(msg.sender!=owner) throw;
+        if(tx.origin!=owner && msg.sender!=owner) throw;
         infosphere.setBytes17(key,value);
     }
 
@@ -149,7 +149,7 @@ contract infosphered is owned{
     // ================ bytes21 ================
 
     function setBytes21(bytes8 key, bytes21 value){
-        if(msg.sender!=owner) throw;
+        if(tx.origin!=owner && msg.sender!=owner) throw;
         infosphere.setBytes21(key,value);
     }
 
@@ -164,7 +164,7 @@ contract infosphered is owned{
     // ================ bytes25 ================
 
     function setBytes25(bytes8 key, bytes25 value){
-        if(msg.sender!=owner) throw;
+        if(tx.origin!=owner && msg.sender!=owner) throw;
         infosphere.setBytes25(key,value);
     }
 
@@ -179,7 +179,7 @@ contract infosphered is owned{
     // ================ bytes29 ================
 
     function setBytes29(bytes8 key, bytes29 value){
-        if(msg.sender!=owner) throw;
+        if(tx.origin!=owner && msg.sender!=owner) throw;
         infosphere.setBytes29(key,value);
     }
 
@@ -194,7 +194,7 @@ contract infosphered is owned{
     // ================ uint8 ================
 
     function setUint8(bytes8 key, uint8 value){
-        if(msg.sender!=owner) throw;
+        if(tx.origin!=owner && msg.sender!=owner) throw;
         infosphere.setUint8(key,value);
     }
 
@@ -209,7 +209,7 @@ contract infosphered is owned{
     // ================ uint32 ================
 
     function setUint32(bytes8 key, uint32 value){
-        if(msg.sender!=owner) throw;
+        if(tx.origin!=owner && msg.sender!=owner) throw;
         infosphere.setUint32(key,value);
     }
 
@@ -224,7 +224,7 @@ contract infosphered is owned{
     // ================ uint56 ================
 
     function setUint56(bytes8 key, uint56 value){
-        if(msg.sender!=owner) throw;
+        if(tx.origin!=owner && msg.sender!=owner) throw;
         infosphere.setUint56(key,value);
     }
 
@@ -239,7 +239,7 @@ contract infosphered is owned{
     // ================ uint80 ================
 
     function setUint80(bytes8 key, uint80 value){
-        if(msg.sender!=owner) throw;
+        if(tx.origin!=owner && msg.sender!=owner) throw;
         infosphere.setUint80(key,value);
     }
 
@@ -254,7 +254,7 @@ contract infosphered is owned{
     // ================ uint104 ================
 
     function setUint104(bytes8 key, uint104 value){
-        if(msg.sender!=owner) throw;
+        if(tx.origin!=owner && msg.sender!=owner) throw;
         infosphere.setUint104(key,value);
     }
 
@@ -269,7 +269,7 @@ contract infosphered is owned{
     // ================ uint128 ================
 
     function setUint128(bytes8 key, uint128 value){
-        if(msg.sender!=owner) throw;
+        if(tx.origin!=owner && msg.sender!=owner) throw;
         infosphere.setUint128(key,value);
     }
 
@@ -284,7 +284,7 @@ contract infosphered is owned{
     // ================ uint152 ================
 
     function setUint152(bytes8 key, uint152 value){
-        if(msg.sender!=owner) throw;
+        if(tx.origin!=owner && msg.sender!=owner) throw;
         infosphere.setUint152(key,value);
     }
 
@@ -299,7 +299,7 @@ contract infosphered is owned{
     // ================ uint176 ================
 
     function setUint176(bytes8 key, uint176 value){
-        if(msg.sender!=owner) throw;
+        if(tx.origin!=owner && msg.sender!=owner) throw;
         infosphere.setUint176(key,value);
     }
 
@@ -314,7 +314,7 @@ contract infosphered is owned{
     // ================ uint200 ================
 
     function setUint200(bytes8 key, uint200 value){
-        if(msg.sender!=owner) throw;
+        if(tx.origin!=owner && msg.sender!=owner) throw;
         infosphere.setUint200(key,value);
     }
 
@@ -329,7 +329,7 @@ contract infosphered is owned{
     // ================ uint224 ================
 
     function setUint224(bytes8 key, uint224 value){
-        if(msg.sender!=owner) throw;
+        if(tx.origin!=owner && msg.sender!=owner) throw;
         infosphere.setUint224(key,value);
     }
 
@@ -344,7 +344,7 @@ contract infosphered is owned{
     // ================ uint248 ================
 
     function setUint248(bytes8 key, uint248 value){
-        if(msg.sender!=owner) throw;
+        if(tx.origin!=owner && msg.sender!=owner) throw;
         infosphere.setUint248(key,value);
     }
 
@@ -359,7 +359,7 @@ contract infosphered is owned{
     // ================ int8 ================
 
     function setInt8(bytes8 key, int8 value){
-        if(msg.sender!=owner) throw;
+        if(tx.origin!=owner && msg.sender!=owner) throw;
         infosphere.setInt8(key,value);
     }
 
@@ -374,7 +374,7 @@ contract infosphered is owned{
     // ================ int72 ================
 
     function setInt72(bytes8 key, int72 value){
-        if(msg.sender!=owner) throw;
+        if(tx.origin!=owner && msg.sender!=owner) throw;
         infosphere.setInt72(key,value);
     }
 
@@ -389,7 +389,7 @@ contract infosphered is owned{
     // ================ int136 ================
 
     function setInt136(bytes8 key, int136 value){
-        if(msg.sender!=owner) throw;
+        if(tx.origin!=owner && msg.sender!=owner) throw;
         infosphere.setInt136(key,value);
     }
 
@@ -404,7 +404,7 @@ contract infosphered is owned{
     // ================ int200 ================
 
     function setInt200(bytes8 key, int200 value){
-        if(msg.sender!=owner) throw;
+        if(tx.origin!=owner && msg.sender!=owner) throw;
         infosphere.setInt200(key,value);
     }
 

@@ -6,6 +6,7 @@ module.exports = function(grunt){
 		var options = this.options({
 				keyType: 'bytes8'
 				,types: ['bool', 'address', 'bytes32', 'int', 'uint']
+				,ownershipCheck:'if(msg.sender!=owner) throw;'
 				,files: {
 					infosphere: "Infosphere.sol"
 					,infosphered: "infosphered.sol"
@@ -24,7 +25,7 @@ module.exports = function(grunt){
 				+'\r\n    Infosphere infosphere;'
 				+'\r\n'
 				+'\r\n    function setInfosphere(address infosphereAddr){'
-				+'\r\n        if(msg.sender!=owner) throw;'
+				+'\r\n        '+options.ownershipCheck
 				+'\r\n        infosphere = Infosphere(infosphereAddr);'
 				+'\r\n    }'
 				+'\r\n'
@@ -76,7 +77,7 @@ module.exports = function(grunt){
 			infospheredSol+='\r\n    // ================ '+type+' ================'
 			infospheredSol+='\r\n'
 			infospheredSol+='\r\n    function set'+typeUpperCaseFirstLetter+'('+keyType+' key, '+type+' value){'
-			infospheredSol+='\r\n        if(msg.sender!=owner) throw;'
+			infospheredSol+='\r\n        '+options.ownershipCheck
 			infospheredSol+='\r\n        infosphere.set'+typeUpperCaseFirstLetter+'(key,value);'
 			infospheredSol+='\r\n    }'
 			infospheredSol+='\r\n'
